@@ -20,3 +20,7 @@ class StrandsDNA:
         result.sort()
         return ' '.join(result)
 
+
+dna = StrandsDNA()
+dna.add_strands('dnbdnd nkljioklk nnb mkmj nnm nnm kjuytrlkm')
+print(dna.get_max_strands())
