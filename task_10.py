@@ -10,13 +10,16 @@ class Point:
         y = self.dot[1]
         return y
 
+    def __str__(self):
+        return f'x coordinate: {self.dot[0]}, y coordinate: {self.dot[1]}'
+
     def distance(self, other):
-        space = ((self.dot[1]-self.dot[0])**2 - (other[1] - other[0])**2)**0.5
+        space = ((self.get_x() - self.get_y())**2 - (other.get_x() - other.get_y())**2)**0.5
         return space
 
     def sum(self, other):
-        new_x = self.dot[0] + other[0]
-        new_y = self.dot[1] + other[1]
+        new_x = self.get_x() + other.get_x()
+        new_y = self.get_y() + other.get_y()
         new_point = Point((new_x, new_y))
         return new_point
 

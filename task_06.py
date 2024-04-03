@@ -14,12 +14,12 @@ class Point:
         return f'x coordinate: {self.dot[0]}, y coordinate: {self.dot[1]}'
 
     def distance(self, other):
-        space = ((self.dot[1]-self.dot[0])**2 - (other[1] - other[0])**2)**0.5
+        space = ((self.get_x() - self.get_y())**2 - (other.get_x() - other.get_y())**2)**0.5
         return space
 
     def sum(self, other):
-        new_x = self.dot[0] + other[0]
-        new_y = self.dot[1] + other[1]
+        new_x = self.get_x() + other.get_x()
+        new_y = self.get_y() + other.get_y()
         new_point = Point((new_x, new_y))
         return new_point
 
@@ -27,6 +27,6 @@ class Point:
 point1 = Point((3, 5))
 print(point1.get_x())
 print(point1.get_y())
-print(point1.distance((4, 3)))
+print(point1.distance(Point((4, 3))))
 print(str(point1))
-print(point1.sum((6, 7)))
+print(point1.sum(Point((6, 7))))
