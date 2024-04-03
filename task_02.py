@@ -3,7 +3,7 @@ class NotSleeping:
     A class representing the process of sheep counting before bedtime.
 
     Attributes:
-        -
+        sheep (list) - list of all sheep counted
 
     Methods:
         add_sheep(number): Adding the sequence number of each new sheep to the list.

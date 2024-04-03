@@ -57,11 +57,13 @@ class User:
         :return: None
         """
         if self.id != id_new:
-           print('Аттрибут id не подлежит обновлению.')
+            print('Аттрибут id не подлежит обновлению.')
+
         self.nick_name = nick_name_new
         self.first_name = first_name_new
         self.last_name = last_name_new
         self.middle_name = middle_name_new
+
         if self.gender != gender_new:
             print('Аттрибут gender не подлежит обновлению.')
 

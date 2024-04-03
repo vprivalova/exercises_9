@@ -25,10 +25,10 @@ class Point:
 
 
 class Segment:
-    one_intersection = ''
 
     def __init__(self, points):
         self.segment = ((points[0].get_x(), points[0].get_y()), (points[1].get_x(), points[1].get_y()))
+        self.one_intersection = ''
         print(self.segment)
 
     def intersections(self):
@@ -43,6 +43,7 @@ class Segment:
         else:
             Segment.one_intersection = False
         return Segment.one_intersection
+
 
 class CoordinateSystem:
     segments = []
